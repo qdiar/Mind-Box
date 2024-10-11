@@ -1,0 +1,92 @@
+.todo-app {
+  background-color: #f0f0f0;
+  padding: 0 20px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  margin: 50px auto;
+
+  .todo-header {
+    color: rgba(175, 47, 47, 0.15);
+    font-size: 100px;
+    text-align: center;
+    font-weight: 100;
+    margin-bottom: 10px;
+    margin-top: 5px;
+  }
+
+  .task-container {
+    background: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+    .filter-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px;
+
+      .items-left {
+        color: rgb(139, 139, 139);
+        font-size: 14px;
+      }
+
+      &:hover {
+        color: #d9534f;
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    width: 600px;
+    padding: 0 15px 15px;
+
+    .todo-header {
+      font-size: 80px;
+    }
+
+    .task-container {
+      .filter-section {
+        padding: 12px;
+
+        .items-left {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 0 10px 10px;
+
+    .todo-header {
+      font-size: 60px;
+    }
+
+    .task-container {
+      .filter-section {
+        padding: 10px;
+
+        .items-left {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .todo-header {
+      font-size: 40px;
+    }
+
+    .task-container {
+      .filter-section {
+        padding: 8px;
+
+        .items-left {
+          font-size: 9px;
+        }
+      }
+    }
+  }
+}

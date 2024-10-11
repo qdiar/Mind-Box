@@ -1,0 +1,143 @@
+.task-list {
+  list-style: none;
+  padding: 0 16px;
+  margin: 0;
+  max-height: 300px;
+  overflow-y: auto;
+  position: relative;
+
+  transition: box-shadow 0.3s ease;
+
+  &.has-scroll {
+    box-shadow: inset -7px 0 10px -7px rgba(0, 0, 0, 0.2);
+  }
+
+  .task-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    font-size: 20px;
+    border-bottom: 1px solid $border-color;
+    position: relative;
+
+    .check-circle {
+      width: 25px;
+      height: 25px;
+      border: 2px solid #ddd;
+      border-radius: 50%;
+      margin-right: 15px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      transition: background-color 0.3s ease;
+
+      &.checked {
+        border: 1px solid rgb(22, 133, 59);
+        &::before {
+          content: url('/check-svgrepo-com.svg');
+          margin-top: 5px;
+          font-size: 16px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+      }
+
+      @media (max-width: 480px) {
+        width: 18px;
+        height: 18px;
+        margin-right: 8px;
+      }
+    }
+
+    .task-input {
+      border: none;
+
+      &:focus {
+        outline: none;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 14px;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 12px;
+      }
+    }
+
+    .task-text {
+      flex: 1;
+      color: #000;
+      font-size: 13px;
+      transition:
+        color 0.3s ease,
+        text-decoration 0.3s ease;
+
+      &.completed {
+        text-decoration: line-through;
+        color: #d9d9d9;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 12px;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 11px;
+      }
+    }
+
+    .task-actions {
+      display: none;
+      position: absolute;
+      right: 0;
+      gap: 10px;
+
+      button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #777;
+        padding: 5px;
+
+        &:hover {
+          color: #000;
+        }
+      }
+
+      @media (max-width: 768px) {
+        gap: 5px;
+      }
+
+      @media (max-width: 480px) {
+        gap: 3px;
+      }
+    }
+
+    &:hover .task-actions {
+      display: flex;
+    }
+
+    @media (max-width: 768px) {
+      padding: 10px 0;
+    }
+
+    @media (max-width: 480px) {
+      padding: 8px 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 10px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 5px;
+  }
+}
