@@ -1,3 +1,9 @@
+VERCEL DEMO DEPLOYD: 
+
+https://mind-box.vercel.app/
+
+
+
 ## Использование
 
 npm i
