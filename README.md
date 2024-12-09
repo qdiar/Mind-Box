@@ -18,21 +18,5 @@ npm i
 
 npm run dev || npm run start
 
-```
-
-- Собрать проект
-
-```
-
-npm run build
-
-````
 
 
-
-{
-  "eslint.workingDirectories": [
-    { "directory": "./client", "changeProcessCWD": true },
-  ]
-}
-````
